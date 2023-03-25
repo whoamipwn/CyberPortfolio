@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css"  />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  
+
+</head>
+<body>
+    <div class="hero-header">
+        <div class="container">
+            <div class="toggle">
+                <i class="fa fa-sun"></i>
+            </div>
+               <div class="header-content">
+                    <div class="profile">
+                     <img src="imgs/imgs.png" alt="">
+                     </div>
+                     <div class="text-content">
+                        <h1> I'M Robson Vieira <br> <span>CyberSecurity</span><br></h1>
+                        <p>
+                            A curious in the world of hacking and programming.
+                            #ctf, #hacking, #pentest, #bugbounty e #cybersecurity
+                        </p>
+                          <button class="button" onclick="document.location='https://www.linkedin.com/in/robson-vieira-b53015211/'">
+                              <span class="text">Linkedin</span>
+                               <span class="icon fa fa-arrow-right"></span>
+                          </button><br>
+                          <button class="button" onclick="document.location='https://github.com/R4b4'">
+                            <span class="text">GitHub</span>
+                             <span class="icon fa fa-arrow-right"></span>
+                        </button>
+                    </div>
+                     <div class="navigation">
+                        <div class="nav">
+                            <a href="#">
+                                <i class="fa fa-home" active></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-comment" onclick="document.location='https://t.me/Dracoonm'"></i>
+                            </a>
+                        </div>
+
+                     </div>
+              </div>
+        </div>
+    </div> 
+    <!----javascript for web -->
+    <script>
+
+     let btn=document.querySelector(".toggle");
+        let icon=document.querySelector(".toggle i");
+        let body=document.querySelector(".hero-header");
+
+        btn.onclick=function(){
+            body.classList.toggle("light-theme");
+            icon.classList.toggle("fa-moon");
+            icon.classList.toggle("fa-sun");
+       
+        }
+        
+    </script>  
+</body>
+</html>

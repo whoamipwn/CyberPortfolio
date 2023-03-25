@@ -1,0 +1,207 @@
+:root{
+    --primary-color: #111;
+    --secondary-color: #f2f2f2;
+}
+.light-theme{
+    --primary-color: #d5d5d5;
+    --secondary-color: #222;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.hero-header{
+    min-height: 100vh;
+    background-color:var(--primary-color);
+    font-family: poppins,sans-serif;
+
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+
+}
+.toggle{
+    position: fixed;
+    right: 4%;
+    top: 5%;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color:#2b2a2a;
+    border-radius: 50px;
+    text-align: center;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+.hero-header .profile{
+    height: 550px;
+    width: 650px;
+    border-radius: 30px;
+    overflow: hidden ;
+    box-shadow: 7px 5px 28px rgba(0,0,0,0,0.1);
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.header-content .text-content{
+    padding: 2rem 3.5rem;
+    margin: 1.2rem;
+    color:var(--secondary-color);
+    width: 80%;
+}
+.header-content .text-content h1{
+    font-size: 3.5rem;
+    color: #772f9c;
+    position: relative;
+    line-height: 3.6rem;
+    margin-bottom: 1.5rem;
+}
+.header-content .text-content h1::before{
+    content: "";
+    background-color:#772f9c;
+    position: absolute;
+    top:25%;
+    left:-4%;
+    height: 5px;
+    width: 30px;
+    border-radius: 10px;
+}
+.header-content .text-content h1 span{
+    color:var(--secondary-color);
+}
+.navigation .nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    padding: 0.8rem;
+
+}
+.navigation .nav a{
+    position: relative;
+    font-size: 18px;
+    display: block;
+    margin: 10px;
+    transition: 0.5s;
+    color:var(--secondary-color);
+}
+.navigation .nav a i{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #2b2a2a;
+    border-radius: 50%;
+    text-align: center;
+    color:#fff;
+    transition: 0.5s;
+}
+.navigation .nav .active{
+    color:var(--secondary-color);
+    background-color: #ffb400;
+}
+.navigation .nav a:hover i{
+    background-color: #772f9c;
+    color:var(--secondary-color);
+}
+.header-content .button{
+    position: relative;
+    width:240px;
+    min-height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+    border: 1px solid #772f9c;
+    border-radius: 35px;
+    margin:2.5rem 0;
+    color:var(--secondary-color);
+    background-color: transparent;
+    
+}
+.button .tex{
+    font-family: poppins;
+    font-size: 18px;
+}
+.button .icon{
+    position: absolute;
+    right:0;
+    top:0;
+    height: 47px;
+    width: 47px;
+    border-radius: 35px;
+    background-color: #772f9c;
+    color:#fff;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;  
+}
+.button:hover .icon{
+    width: 100%;
+}
+@media(max-width:1200px)
+{
+    .header-content{
+        flex-direction: ccolumn;
+    }
+    .header-content .profile{
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin-top:2rem;
+    }
+    .header-content .profile img{
+        width: 100%;
+        height: 100%;
+
+    }
+    .text-content{
+        width: 100%;
+        text-align: center;
+    }
+    .text-content h1::before{
+        display: none;
+    }
+    .navigation{
+        background-color: #2b2a2a;
+        position: fixed;
+        bottom: 0;
+        width: 100%;   
+    }
+    .navigation .nav{
+        width:60%;
+        flex-direction: row;
+        padding: 0.3rem;
+        margin:auto;
+    }
+       
+}
+@media(max-width:768px)
+{
+    .header-content .prifile{
+        width:280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-top: 2rem;
+    }
+    .header-content .profile img{
+        width: 100%;
+        height: 100%;
+    }
+    .header-content .text-content h1{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+
+
+}
